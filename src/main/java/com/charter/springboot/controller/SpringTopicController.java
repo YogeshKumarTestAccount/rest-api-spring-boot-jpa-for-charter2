@@ -21,14 +21,17 @@ public class SpringTopicController {
 	private TopicService topicService;
 	private static final Logger logger = LoggerFactory.getLogger(SpringCourseController.class);
 	
-	@RequestMapping("/topics")
+	@RequestMapping(method=RequestMethod.GET,value="/topics")
+	
 	public List<RelatedTopic> getAllTopics() {
-		logger.warn("METHOD CALLED");
-		logger.info("Logger Info Called");
+		logger.info("getAllTopics Service Called");
+		System.out.println("getAllTopics Service Called1");
 		return topicService.getAllTopics();
+		
+		
 	}
 
-	@RequestMapping("/topics/{id}")
+	@RequestMapping(method=RequestMethod.GET,value="/topics/{id}")
 	public RelatedTopic getTopicById(@PathVariable String id) {
 		return topicService.getTopicById(id);
 	}

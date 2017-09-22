@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "management.security.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'management.security.enabled'"
+  },
+  {
+    "name": "management.port",
+    "type": "java.lang.String",
+    "description": "A description for 'management.port'"
+  },
+  {
+    "name": "endpoints.info.id",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.info.id'"
+  },
+  {
+    "name": "endpoints.info.sensitive",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.info.sensitive'"
+  },
+  {
+    "name": "endpoints.info.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.info.enabled'"
+  },
+  {
+    "name": "info.app.name",
+    "type": "java.lang.String",
+    "description": "A description for 'info.app.name'"
+  },
+  {
+    "name": "info.app.description",
+    "type": "java.lang.String",
+    "description": "A description for 'info.app.description'"
+  }
+]}

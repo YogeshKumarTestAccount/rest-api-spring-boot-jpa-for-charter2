@@ -19,19 +19,20 @@ public class SpringCourseController {
 	private CourseService courseService;
         private static final Logger logger = LoggerFactory.getLogger(SpringCourseController.class);
 	
-	@RequestMapping("/topics/{topicId}/courses")
+	@RequestMapping(method=RequestMethod.GET,value="/topics/{topicId}/courses")
 	public List<Course> getAllCourse(@PathVariable String topicId) {
 		logger.info("getAll Service"+topicId);
 		return courseService.getAllCourse(topicId);
 	}
 
-	@RequestMapping("/courses/{courseId}")
+	@RequestMapping(method=RequestMethod.GET,value="/courses/{courseId}")
 	public Course findByCourseId(@PathVariable String courseId) {
 		return courseService.getCourseByCourseID(courseId);
 	}
 		
-	@RequestMapping("/topics/{topicId}/courses/{id}")
+	@RequestMapping(method=RequestMethod.GET,value="/topics/{topicId}/courses/{id}")
 	public Course getCourseById(@PathVariable String id) {
+		logger.info("get Service"+id);
 		logger.info("get Service"+id);
 		return courseService.getCourse(id);
 	}
